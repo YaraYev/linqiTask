@@ -16,15 +16,14 @@ test('Verifying adding and saving of action process', async ({
 
   const processDesignerPage = await processDashboardPage.createProcess();
   await processDesignerPage.fillProcessName(processName);
-
   await processDesignerPage.openActionsSidebar();
   await processDesignerPage.dragProcessStartToCanvas();
   await processDesignerPage.closeActionsSidebar();
-
   await processDesignerPage.save();
+
   await expect(processDesignerPage.saveIconOk,
     'Expected success icon to appear after saving the process').toBeVisible();
-
   await expect(processDesignerPage.processNameInput, `Expected process name to be "${processName}" after saving`).toHaveValue(processName);
+
   await processDesignerPage.processCanvas.expectNodeCount(1);
 });
