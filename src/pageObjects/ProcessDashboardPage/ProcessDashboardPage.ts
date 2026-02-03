@@ -16,11 +16,11 @@ export default class ProcessDashboardPage extends BasePage {
 
     async createProcess(): Promise<ProcessDesignerPage> {
         const [newPage] = await Promise.all([
-            this.page.context().waitForEvent('page'),
+            this.page.waitForEvent('popup'),
             this.createProcessBtn.click(),
         ]);
-        await newPage.waitForLoadState('domcontentloaded');
 
+        await newPage.waitForLoadState('domcontentloaded');
         return new ProcessDesignerPage(newPage);
     }
 }

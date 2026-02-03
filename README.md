@@ -53,6 +53,8 @@ npm run report
 
 ## Notes (for reviewer)
 **Time spent:** 
+- Approximately 8 hours in total.
 
 **Challenges:**
--
+- Handling the Process Designer opening in a new browser tab.
+- Implementing drag-and-drop on an SVG-based canvas with zoom and pan.
