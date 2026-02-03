@@ -16,5 +16,3 @@ export const test = base.extend<Fixtures>({
         await use(new ProcessDashboardPage(page));
     },
 });
-
-export { expect } from '@playwright/test';
