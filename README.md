@@ -40,6 +40,12 @@ Alternative:
 npm test
 ```
 
+Other useful commands:
+```bash
+npm run test:headed
+npm run test:ui
+```
+
 ## Report
 ```bash
 npm run report
