@@ -12,7 +12,7 @@ test('Verifying adding and saving of action process', async ({
   await expect(homePage.title, 'Home page title should be "Create dashboard sequence"').toHaveText('Create dashboard sequence');
 
   await homePage.clickSideBarProcesses();
-  await expect(processDashboardPage.createProcessBtn).toBeVisible();
+  await expect(processDashboardPage.createProcessBtn, 'Expected "Create process" button to be visible after clicking "Processes"').toBeVisible();
 
   const processDesignerPage = await processDashboardPage.createProcess();
 
